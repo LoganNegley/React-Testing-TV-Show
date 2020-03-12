@@ -34,7 +34,9 @@ export default function App() {
   return (
     <div data-testid= 'app' className="App">
       <img className="poster-img" src={show.image.original} alt={show.name} />
-      <h1>{show.name}</h1>
+      {/* {<h1>{show.name}</h1>}  */}
+      <h1>This is a test</h1>
+
       {parse(show.summary)}
       <Dropdown
         options={Object.keys(seasons)}

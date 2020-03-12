@@ -6,11 +6,19 @@ import App from '../../App';
 
 test('fetching data is being rendered', () => {
     const mockGetData = jest.fn();
-    const {getByText} = render(<App getData = {mockGetData} show={false}/>)
+    const {getByText, rerender} = render(<App getData = {mockGetData} show={false}/>)
     const isLoading = getByText(/fetching data/i)
     expect(isLoading).toBeInTheDocument();
     expect(isLoading).toBeTruthy();
 });
+
+// test('testing test', ()=>{
+//     const {getByText} = render(<App/>)
+
+//     const test = getByText(/this is a test/i)
+
+//     expect(test).toBeInTheDocument();
+// })
 
 
 
