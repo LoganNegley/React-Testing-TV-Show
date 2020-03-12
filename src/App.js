@@ -15,6 +15,8 @@ export default function App() {
   const [selectedSeason, setSelectedSeason] = useState("");
   const episodes = seasons[selectedSeason] || [];
 
+  console.log(show);
+
   useEffect(() => {
   fetchShow()
     .then(res => {
